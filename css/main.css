@@ -1,0 +1,131 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #050510;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0a0a15;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00d9ff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  height: 100vh;
+  background: url("../images/j1407b.jpg") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* --- darker + blur overlay --- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* makes the image darker */
+  backdrop-filter: blur(2px);     /* soft blur */
+  z-index: 1;
+}
+
+/* --- ensure text appears above overlay --- */
+.hero h2,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 32px;
+  color: #00d9ff;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 16px;
+  color: #ddd;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* ---------- Button ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: #00d9ff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #00aaff;
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
