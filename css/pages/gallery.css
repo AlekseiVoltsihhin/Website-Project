@@ -1,0 +1,116 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background + text */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a10;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0a0a15;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00d9ff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+nav a:hover, .active {
+  color: #00d9ff;
+}
+
+/* Hero */
+.hero {
+  background-image: url("../images/j1407b.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 30px;
+  color: #00d9ff;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: #ddd;
+}
+
+/* Main */
+main {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main h3 {
+  color: #00d9ff;
+  margin-bottom: 20px;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.img-box {
+  background-color: #161623;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.img-box:hover {
+  transform: scale(1.03);
+}
+
+/* --- UPDATED IMAGE SIZING --- */
+.img-box img {
+  width: 100%;
+  height: 200px;         /* pildid on ühesuurused */
+  object-fit: cover;     /* hoiab proportsioonid ja kärbib */
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #aaa;
+  margin-top: 40px;
+}
