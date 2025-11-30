@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background + text */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0a0a10;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #0a0a15;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #00d9ff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+}
+
+nav a:hover,
+.active {
+  color: #00d9ff;
+}
+
+/* Page header */
+header {
+  text-align: center;
+  padding: 140px 20px 40px; /* extra padding because of fixed navbar */
+}
+
+header h1 {
+  color: #00d9ff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Contact form container */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-form {
+  background-color: #161623;
+  padding: 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #0d0d16;
+  color: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00d9ff;
+}
+
+/* Submit button */
+.contact-form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #00d9ff;
+  color: #0a0a10;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00a6c5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #aaa;
+  margin-top: 40px;
+}
