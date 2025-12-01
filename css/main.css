@@ -28,9 +28,39 @@ body {
 }
 
 .logo {
+  position: relative;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: #00d9ff;
+  padding-left: 38px;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 217, 255, 0.75);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.45);
+  transform: translateY(-50%) rotate(-8deg);
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #00d9ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+  transform: translateY(-50%);
 }
 
 nav ul {
@@ -46,6 +76,10 @@ nav a {
 }
 
 nav a:hover {
+  color: #00d9ff;
+}
+
+nav a.active {
   color: #00d9ff;
 }
 

@@ -1,20 +1,10 @@
-/* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #050510;
-  color: white;
   line-height: 1.6;
 }
 
 /* Hero Section */
 .hero-comparison {
-  background: url("../images/j1407b.jpg") center/cover no-repeat;
+  background: url("../../images/cosmos.svg") center/cover no-repeat;
   text-align: center;
   padding: 150px 20px 80px;
   margin-top: 60px;
@@ -562,9 +552,10 @@ tbody tr:last-child td {
 }
 
 .j1407b-image {
-  background-image: url("https://www.planetary.org/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2hWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--24f0be7d1c9c8c5f73e0c1d4e4e8b35e8a0e8d1d/Ring_System_around_J1407b.jpg");
+  background-image: url("../../images/j1407b_planet.jpg");
   background-size: cover;
   background-position: center;
+  filter: saturate(1.1);
 }
 
 .eclipse-image {
