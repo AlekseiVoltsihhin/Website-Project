@@ -1,57 +1,4 @@
-/* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Page background and text */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #050510;
-  color: white;
-  line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: #0a0a15;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  border-bottom: 1px solid #222;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #00d9ff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-  color: #00d9ff;
-}
-
-/* Hero section */
+/* hero taustaosa */
 .hero {
   background-image: url("../../images/j1407b.jpg");
   background-size: cover;
@@ -63,7 +10,7 @@ nav a.active {
   position: relative;
 }
 
-/* Darker overlay for hero */
+/* hero tumenev kiht */
 .hero::before {
   content: "";
   position: absolute;
@@ -92,7 +39,7 @@ nav a.active {
   font-size: 18px;
 }
 
-/* Main content */
+/* põhisisu ala */
 main {
   padding: 60px 20px;
   max-width: 1000px;
@@ -107,7 +54,7 @@ main > h3 {
   text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
 }
 
-/* Fact cards */
+/* faktikaartide ruudustik */
 .facts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -140,7 +87,7 @@ main > h3 {
   font-size: 15px;
 }
 
-/* Info sections */
+/* infosektsioonid */
 .info-section {
   background-color: #0d0d1a;
   padding: 30px;
@@ -173,7 +120,7 @@ main > h3 {
   line-height: 1.6;
 }
 
-/* Highlight box */
+/* esiletõste kast */
 .highlight-box {
   background: linear-gradient(145deg, #1a1a2e, #161623);
   border: 1px solid #00d9ff;
@@ -206,7 +153,7 @@ main > h3 {
   border-bottom: none;
 }
 
-/* Footer */
+/* jalus keskjoondatud tekstiga */
 footer {
   text-align: center;
   padding: 30px 20px;
@@ -216,7 +163,7 @@ footer {
   border-top: 1px solid #222;
 }
 
-/* Responsive */
+/* mobiilivaate kohandused */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

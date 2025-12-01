@@ -1,11 +1,11 @@
-/* ---------- Reset ---------- */
+/* lähtestan marginaadid ja padjad */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------- Base ---------- */
+/* põhilised baasstiilid */
 body {
   font-family: Arial, sans-serif;
   background-color: #050510;
@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- Navbar ---------- */
+/* navbari paigutus ja värvid */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -28,9 +28,39 @@ body {
 }
 
 .logo {
+  position: relative;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   color: #00d9ff;
+  padding-left: 38px;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 217, 255, 0.75);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.45);
+  transform: translateY(-50%) rotate(-8deg);
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  background: #00d9ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+  transform: translateY(-50%);
 }
 
 nav ul {
@@ -49,7 +79,11 @@ nav a:hover {
   color: #00d9ff;
 }
 
-/* ---------- Hero Section ---------- */
+nav a.active {
+  color: #00d9ff;
+}
+
+/* hero taust ja tekstipaigutus */
 .hero {
   height: 100vh;
   background: url("../images/j1407b.jpg") center/cover no-repeat;
@@ -62,17 +96,17 @@ nav a:hover {
   padding: 0 20px;
 }
 
-/* --- darker + blur overlay --- */
+/* hero tumedam kiht ja udu */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* makes the image darker */
-  backdrop-filter: blur(2px);     /* soft blur */
+  background: rgba(0, 0, 0, 0.5); /* tumendan tausta */
+  backdrop-filter: blur(2px);     /* lisan kerge udu */
   z-index: 1;
 }
 
-/* --- ensure text appears above overlay --- */
+/* hero teksti kiht */
 .hero h2,
 .hero p,
 .hero a {
@@ -94,7 +128,7 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-/* ---------- Button ---------- */
+/* nuppude stiil */
 .btn {
   display: inline-block;
   padding: 10px 25px;
@@ -110,7 +144,7 @@ nav a:hover {
   color: #fff;
 }
 
-/* ---------- Responsive ---------- */
+/* mobiili kohandused */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
