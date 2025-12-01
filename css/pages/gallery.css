@@ -5,21 +5,24 @@ body {
 
 /* Hero */
 .hero {
-  background-image: url("../images/j1407b.jpg");
+  background-image: url("../../images/cosmos.svg");
   background-size: cover;
   background-position: center;
   text-align: center;
-  padding: 120px 20px;
+  padding: 140px 20px 120px;
 }
 
 .hero h2 {
-  font-size: 30px;
+  font-size: 36px;
   color: #00d9ff;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  letter-spacing: 1.2px;
 }
 
 .hero p {
-  color: #ddd;
+  color: #e8f6ff;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 /* Main */
