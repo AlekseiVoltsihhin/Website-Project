@@ -1,0 +1,695 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #050510;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-comparison {
+  background: url("../images/j1407b.jpg") center/cover no-repeat;
+  text-align: center;
+  padding: 150px 20px 80px;
+  margin-top: 60px;
+  border-bottom: 2px solid #00d9ff;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+
+.hero-content-comp {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-comparison h2 {
+  font-size: 36px;
+  color: #00d9ff;
+  margin-bottom: 15px;
+  text-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+.hero-comparison p {
+  font-size: 18px;
+  color: #ddd;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+main h3 {
+  color: #00d9ff;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* Planet Cards Section */
+.planet-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.planet-card {
+  background: linear-gradient(145deg, #0d0d1a, #1a1a2e);
+  border: 1px solid #222;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.planet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
+  border-color: #00d9ff;
+}
+
+/* Planet Icons */
+.planet-icon {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.planet-sphere {
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.planet-sphere.large {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #ff6b35, #8b4513);
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+}
+
+.planet-sphere.medium {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #f4d03f, #c39953);
+  box-shadow: 0 0 20px rgba(244, 208, 63, 0.4);
+}
+
+.planet-sphere.jupiter-planet {
+  background: radial-gradient(circle at 30% 30%, #d4a373, #b8956a);
+  box-shadow: 0 0 20px rgba(212, 163, 115, 0.4);
+}
+
+/* Rings */
+.rings {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid rgba(200, 200, 200, 0.6);
+  transform: rotateX(75deg);
+}
+
+.rings.massive {
+  width: 180px;
+  height: 180px;
+  border-width: 8px;
+  border-color: rgba(0, 217, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3),
+              inset 0 0 20px rgba(0, 217, 255, 0.2);
+  animation: ringGlow 3s infinite alternate;
+}
+
+.rings.normal {
+  width: 140px;
+  height: 140px;
+  border-width: 5px;
+  border-color: rgba(200, 200, 200, 0.5);
+}
+
+@keyframes ringGlow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3),
+                inset 0 0 20px rgba(0, 217, 255, 0.2);
+  }
+  to {
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.6),
+                inset 0 0 30px rgba(0, 217, 255, 0.4);
+  }
+}
+
+.planet-card h3 {
+  color: #00d9ff;
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.planet-type {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.planet-card .stats {
+  list-style: none;
+  text-align: left;
+}
+
+.planet-card .stats li {
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  color: #ccc;
+}
+
+.planet-card .stats li:last-child {
+  border-bottom: none;
+}
+
+.planet-card .stats strong {
+  color: #00d9ff;
+}
+
+/* Ring Comparison Section */
+.ring-comparison {
+  background-color: #0d0d1a;
+  padding: 40px;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  border-left: 4px solid #00d9ff;
+}
+
+/* Interactive Comparison */
+.interactive-comparison {
+  margin: 40px 0;
+}
+
+.comparison-canvas {
+  position: relative;
+  height: 600px;
+  background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a15 70%);
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 2px solid #222;
+}
+
+.scale-reference {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+/* Saturn rings only */
+.saturn-rings-only {
+  position: absolute;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.saturn-rings-scaled {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(200, 200, 200, 0.8);
+  border-radius: 50%;
+  transform: rotateX(75deg);
+  box-shadow: 0 0 20px rgba(200, 200, 200, 0.5),
+              inset 0 0 15px rgba(200, 200, 200, 0.3);
+  background: radial-gradient(ellipse at center,
+    transparent 30%,
+    rgba(200, 200, 200, 0.1) 35%,
+    rgba(200, 200, 200, 0.2) 40%,
+    transparent 45%);
+}
+
+/* J1407b rings only - MASSIVE */
+.j1407b-rings-only {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+}
+
+.j1407b-rings-scaled {
+  width: 7650px; /* 425× larger than Saturn's 18px rings */
+  height: 7650px;
+  border: 20px solid rgba(0, 217, 255, 0.4);
+  border-radius: 50%;
+  transform: rotateX(75deg);
+  box-shadow: 0 0 100px rgba(0, 217, 255, 0.5),
+              inset 0 0 100px rgba(0, 217, 255, 0.3);
+  background: radial-gradient(ellipse at center,
+    transparent 30%,
+    rgba(0, 217, 255, 0.1) 35%,
+    rgba(0, 217, 255, 0.15) 38%,
+    rgba(0, 217, 255, 0.2) 41%,
+    transparent 45%);
+  animation: megaRingSpin 60s linear infinite;
+}
+
+@keyframes megaRingSpin {
+  from { transform: rotateX(75deg) rotateZ(0deg); }
+  to { transform: rotateX(75deg) rotateZ(360deg); }
+}
+
+.label {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #00d9ff;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+  white-space: nowrap;
+}
+
+.j1407b-label-fixed {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  color: #00d9ff;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+  z-index: 10;
+  background: rgba(10, 10, 21, 0.8);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid #00d9ff;
+}
+
+/* Slider Control */
+.slider-control {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(145deg, #1a1a2e, #0d0d1a);
+  border-radius: 12px;
+  border: 1px solid #222;
+  margin-bottom: 20px;
+}
+
+.slider-control label {
+  display: block;
+  color: #00d9ff;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#zoomLevel {
+  color: #ff6b35;
+}
+
+.comparison-slider {
+  width: 80%;
+  max-width: 600px;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #00d9ff 0%, #ff6b35 100%);
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.comparison-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00d9ff;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+  transition: transform 0.2s;
+}
+
+.comparison-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.comparison-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00d9ff;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+  transition: transform 0.2s;
+}
+
+.comparison-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 600px;
+  margin: 10px auto 0;
+  color: #888;
+  font-size: 14px;
+}
+
+.scale-info-box {
+  background: linear-gradient(145deg, #1a1a2e, #0d0d1a);
+  border: 1px solid #00d9ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.scale-info-box p {
+  color: #00d9ff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.scale-info-box ul {
+  list-style: none;
+  color: #ccc;
+}
+
+.scale-info-box ul li {
+  padding: 5px 0;
+  font-size: 15px;
+}
+
+.fun-fact {
+  background: linear-gradient(145deg, #1a1a2e, #2a2a3e);
+  border: 2px solid #00d9ff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+.fun-fact h4 {
+  color: #00d9ff;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.fun-fact p {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Stats Table */
+.stats-table {
+  margin-bottom: 60px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #0d0d1a;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #1a1a2e;
+}
+
+th {
+  color: #00d9ff;
+  padding: 18px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #00d9ff;
+}
+
+td {
+  padding: 15px 18px;
+  color: #ddd;
+  border-bottom: 1px solid #222;
+}
+
+tbody tr:hover {
+  background-color: #161623;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Key Differences Section */
+.key-differences {
+  margin-bottom: 60px;
+}
+
+.differences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.difference-card {
+  background: linear-gradient(145deg, #0d0d1a, #1a1a2e);
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s, border-color 0.3s;
+  text-align: center;
+}
+
+.difference-card:hover {
+  transform: translateY(-5px);
+  border-color: #00d9ff;
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+}
+
+.card-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.difference-card h4 {
+  color: #00d9ff;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.difference-card p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Comparison Gallery Section */
+.comparison-gallery {
+  margin-bottom: 60px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  background: linear-gradient(145deg, #0d0d1a, #1a1a2e);
+  border: 1px solid #222;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.3);
+  border-color: #00d9ff;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.saturn-image {
+  background-image: url("https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=800");
+  background-size: cover;
+  background-position: center;
+}
+
+.j1407b-image {
+  background-image: url("https://www.planetary.org/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2hWIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--24f0be7d1c9c8c5f73e0c1d4e4e8b35e8a0e8d1d/Ring_System_around_J1407b.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.eclipse-image {
+  background-image: url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800");
+  background-size: cover;
+  background-position: center;
+}
+
+.eclipse-image::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    #00d9ff 10%,
+    #00d9ff 20%,
+    transparent 25%,
+    #00d9ff 30%,
+    transparent 40%,
+    #00d9ff 50%,
+    transparent 60%,
+    #00d9ff 70%,
+    transparent 80%,
+    #00d9ff 90%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+.gallery-caption {
+  padding: 20px;
+}
+
+.gallery-caption h4 {
+  color: #00d9ff;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.gallery-caption p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #0a0a15;
+  color: #aaa;
+  border-top: 1px solid #222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-comparison {
+    padding: 120px 20px 60px;
+  }
+
+  .hero-comparison h2 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 40px 15px;
+  }
+
+  .planet-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ring-comparison {
+    padding: 25px;
+  }
+
+  .comparison-canvas {
+    height: 400px;
+  }
+
+  .saturn-planet {
+    width: 80px;
+    height: 80px;
+  }
+
+  .j1407b-planet {
+    width: 100px;
+    height: 100px;
+  }
+
+  .saturn-rings {
+    width: 160px;
+    height: 160px;
+  }
+
+  .j1407b-rings {
+    width: 280px;
+    height: 280px;
+  }
+
+  .comparison-slider {
+    width: 90%;
+  }
+
+  .slider-labels {
+    width: 90%;
+  }
+
+  .differences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 12px 10px;
+  }
+}

@@ -1,10 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparison – Planet J1407b</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages/comparison.css">
 </head>
 <body>
+  <header class="navbar">
+    <h1 class="logo">J1407b Wiki</h1>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="science.html">Science</a></li>
+        <li><a href="comparison.html" class="active">Comparison</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero-comparison">
+    <div class="hero-overlay"></div>
+    <div class="hero-content-comp">
+      <h2>How Does J1407b Compare?</h2>
+      <p>See how this ringed giant stacks up against the planets in our solar system.</p>
+    </div>
+  </section>
+
+  <main>
+    <!-- Planet Cards Comparison -->
+    <section class="planet-cards">
+      <div class="planet-card j1407b">
+        <div class="planet-icon">
+          <div class="planet-sphere large"></div>
+          <div class="rings massive"></div>
+        </div>
+        <h3>J1407b</h3>
+        <p class="planet-type">Exoplanet / Brown Dwarf</p>
+        <ul class="stats">
+          <li><strong>Mass:</strong> 10-40 × Jupiter</li>
+          <li><strong>Ring Diameter:</strong> 120 million km</li>
+          <li><strong>Distance:</strong> 420 light-years</li>
+          <li><strong>Rings:</strong> 30+ detected</li>
+        </ul>
+      </div>
+
+      <div class="planet-card saturn">
+        <div class="planet-icon">
+          <div class="planet-sphere medium"></div>
+          <div class="rings normal"></div>
+        </div>
+        <h3>Saturn</h3>
+        <p class="planet-type">Gas Giant</p>
+        <ul class="stats">
+          <li><strong>Mass:</strong> 95 × Earth</li>
+          <li><strong>Ring Diameter:</strong> 282,000 km</li>
+          <li><strong>Distance:</strong> 1.2 billion km</li>
+          <li><strong>Rings:</strong> 7 major groups</li>
+        </ul>
+      </div>
+
+      <div class="planet-card jupiter">
+        <div class="planet-icon">
+          <div class="planet-sphere medium jupiter-planet"></div>
+        </div>
+        <h3>Jupiter</h3>
+        <p class="planet-type">Gas Giant</p>
+        <ul class="stats">
+          <li><strong>Mass:</strong> 318 × Earth</li>
+          <li><strong>Ring Diameter:</strong> 226,000 km</li>
+          <li><strong>Distance:</strong> 778 million km</li>
+          <li><strong>Rings:</strong> 4 faint rings</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Interactive Ring Size Comparison -->
+    <section class="ring-comparison">
+      <h3>Interactive Scale Comparison</h3>
+      <p class="subtitle">Use the slider to see the TRUE size difference between Saturn's and J1407b's ring systems</p>
+
+      <div class="interactive-comparison">
+        <div class="comparison-canvas">
+          <div class="scale-reference">
+            <div class="saturn-rings-only">
+              <div class="saturn-rings-scaled"></div>
+              <div class="label">Saturn's Rings</div>
+            </div>
+
+            <div class="j1407b-rings-only">
+              <div class="j1407b-rings-scaled"></div>
+            </div>
+          </div>
+          <div class="j1407b-label-fixed">J1407b's Rings</div>
+        </div>
+
+        <div class="slider-control">
+          <label for="scaleSlider">Zoom level: <span id="zoomLevel">1.0x</span></label>
+          <input type="range" id="scaleSlider" min="10" max="100" value="10" class="comparison-slider">
+          <div class="slider-labels">
+            <span>Zoomed Out (see full J1407b)</span>
+            <span>Zoomed In (see details)</span>
+          </div>
+        </div>
+
+        <div class="scale-info-box">
+          <p><strong>Scale Facts:</strong></p>
+          <ul>
+            <li>Saturn's rings: ~282,000 km diameter</li>
+            <li>J1407b's rings: ~120,000,000 km diameter</li>
+            <li><strong>J1407b's rings are 425× larger!</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fun-fact">
+        <h4>🌟 Mind-Blowing Fact</h4>
+        <p>If Saturn had J1407b's rings, they would be easily visible from Earth with the naked eye and would appear several times larger than the full Moon in our night sky!</p>
+      </div>
+    </section>
+
+    <!-- Stats Table -->
+    <section class="stats-table">
+      <h3>Detailed Comparison</h3>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>J1407b</th>
+              <th>Saturn</th>
+              <th>Jupiter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Type</td>
+              <td>Exoplanet/Brown Dwarf</td>
+              <td>Gas Giant</td>
+              <td>Gas Giant</td>
+            </tr>
+            <tr>
+              <td>Mass</td>
+              <td>10-40 Jupiter masses</td>
+              <td>95 Earth masses</td>
+              <td>318 Earth masses</td>
+            </tr>
+            <tr>
+              <td>Ring Diameter</td>
+              <td>~120 million km</td>
+              <td>282,000 km</td>
+              <td>226,000 km (faint)</td>
+            </tr>
+            <tr>
+              <td>Number of Rings</td>
+              <td>30+ detected</td>
+              <td>7 major groups</td>
+              <td>4 faint rings</td>
+            </tr>
+            <tr>
+              <td>Ring Mass</td>
+              <td>~1 Earth mass</td>
+              <td>0.00004 Earth masses</td>
+              <td>Negligible</td>
+            </tr>
+            <tr>
+              <td>Distance from Earth</td>
+              <td>420 light-years</td>
+              <td>1.2 billion km</td>
+              <td>778 million km</td>
+            </tr>
+            <tr>
+              <td>Discovery Year</td>
+              <td>2012</td>
+              <td>Ancient times</td>
+              <td>Ancient times</td>
+            </tr>
+            <tr>
+              <td>Moons</td>
+              <td>Possibly forming</td>
+              <td>146 known</td>
+              <td>95 known</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Key Differences -->
+    <section class="key-differences">
+      <h3>Key Differences</h3>
+      <div class="differences-grid">
+        <div class="difference-card">
+          <div class="card-icon">📏</div>
+          <h4>Scale</h4>
+          <p>J1407b's ring system is so massive that if placed in our solar system, it would extend beyond the orbit of Mercury and possibly Venus.</p>
+        </div>
+        <div class="difference-card">
+          <div class="card-icon">👁️</div>
+          <h4>Visibility</h4>
+          <p>Saturn's rings are easily visible with small telescopes. J1407b's rings were detected by the shadow they cast on their parent star during a 56-day eclipse.</p>
+        </div>
+        <div class="difference-card">
+          <div class="card-icon">🌙</div>
+          <h4>Formation</h4>
+          <p>J1407b's rings likely represent an early stage of moon formation, similar to what Saturn may have looked like billions of years ago.</p>
+        </div>
+        <div class="difference-card">
+          <div class="card-icon">💎</div>
+          <h4>Composition</h4>
+          <p>While Saturn's rings are mostly water ice, J1407b's ring composition is still unknown but likely contains rock, ice, and dust.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Gallery Section -->
+    <section class="comparison-gallery">
+      <h3>Visual Comparison Gallery</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-image saturn-image"></div>
+          <div class="gallery-caption">
+            <h4>Saturn</h4>
+            <p>The most iconic ringed planet in our solar system</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image j1407b-image"></div>
+          <div class="gallery-caption">
+            <h4>J1407b</h4>
+            <p>Artist's impression of J1407b's massive ring system</p>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-image eclipse-image"></div>
+          <div class="gallery-caption">
+            <h4>Light Curve</h4>
+            <p>The 56-day eclipse that revealed J1407b's rings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Planet J1407b Project | Educational Resource</p>
+  </footer>
+
+  <script>
+    // Interactive TRUE SCALE Ring Comparison
+    const scaleSlider = document.getElementById('scaleSlider');
+    const scaleReference = document.querySelector('.scale-reference');
+    const zoomLevelDisplay = document.getElementById('zoomLevel');
+
+    scaleSlider.addEventListener('input', function() {
+      const value = this.value;
+      // Scale from 0.1 (zoomed out to see full J1407b) to 1.0 (zoomed in)
+      const scale = value / 100;
+      scaleReference.style.transform = `scale(${scale})`;
+      zoomLevelDisplay.textContent = `${scale.toFixed(1)}x`;
+    });
+
+    // Set initial zoom
+    scaleReference.style.transform = 'scale(0.1)';
+
+    // Add smooth scroll for navigation links
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (this.getAttribute('href').startsWith('#')) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+
+    // Add animation on scroll for cards
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards and sections for scroll animations
+    const animatedElements = document.querySelectorAll('.planet-card, .difference-card, .stats-table, .ring-comparison');
+    animatedElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>
