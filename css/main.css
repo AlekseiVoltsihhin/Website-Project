@@ -144,6 +144,16 @@ nav a.active {
   color: #fff;
 }
 
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #0a0a15;
+  color: #aaa;
+  margin-top: 60px;
+  border-top: 1px solid #222;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .navbar {

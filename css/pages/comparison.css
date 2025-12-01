@@ -605,15 +605,6 @@ tbody tr:last-child td {
   line-height: 1.5;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #0a0a15;
-  color: #aaa;
-  border-top: 1px solid #222;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-comparison {
