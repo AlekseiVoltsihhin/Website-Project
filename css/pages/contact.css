@@ -1,52 +1,6 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Background + text */
+/* Page spacing */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0a0a10;
-  color: white;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: #0a0a15;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  border-bottom: 1px solid #222;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #00d9ff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #ccc;
-  font-weight: 500;
-}
-
-nav a:hover,
-.active {
-  color: #00d9ff;
+  line-height: 1.6;
 }
 
 /* Page header */
