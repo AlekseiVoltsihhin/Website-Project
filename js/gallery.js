@@ -1,6 +1,7 @@
-//Gallery lehe piltidele klõpsamine
-//Kasutatud FsLightbox CDN veebis saadaval olevat otsefaili https://cdn.jsdelivr.net/npm/fslightbox/index.js
-//Kood js failis on ise kirjutatud, kuid abiks kasutasin https://fslightbox.com/javascript/documentation ja https://developer.mozilla.org/en-US/docs/Web/API/Document
+//gallery.js gallery.html-i jaoks
+//Põhimõte: Gallery lehe piltidele klõpsamine, et neid suurendada ja nende vahel liikuda
+//Selle töötamiseks on gallery.html failis kasutatud FsLightbox CDN veebis saadaval olevat otsefaili https://cdn.jsdelivr.net/npm/fslightbox/index.js
+//Koodi autor: Reelika Möller, abiks kasutasin https://fslightbox.com/javascript/documentation ja https://developer.mozilla.org/en-US/docs/Web/API/Document
 
 //peab ootama, kuni HTML on täielikult laetud
 document.addEventListener("DOMContentLoaded", () => {
