@@ -1,11 +1,11 @@
-/* ---------- Reset ---------- */
+/* lähtestan marginaadid ja padjad */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------- Base ---------- */
+/* põhilised baasstiilid */
 body {
   font-family: Arial, sans-serif;
   background-color: #050510;
@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ---------- Navbar ---------- */
+/* navbari paigutus ja värvid */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -83,7 +83,7 @@ nav a.active {
   color: #00d9ff;
 }
 
-/* ---------- Hero Section ---------- */
+/* hero taust ja tekstipaigutus */
 .hero {
   height: 100vh;
   background: url("../images/j1407b.jpg") center/cover no-repeat;
@@ -96,17 +96,17 @@ nav a.active {
   padding: 0 20px;
 }
 
-/* --- darker + blur overlay --- */
+/* hero tumedam kiht ja udu */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* makes the image darker */
-  backdrop-filter: blur(2px);     /* soft blur */
+  background: rgba(0, 0, 0, 0.5); /* tumendan tausta */
+  backdrop-filter: blur(2px);     /* lisan kerge udu */
   z-index: 1;
 }
 
-/* --- ensure text appears above overlay --- */
+/* hero teksti kiht */
 .hero h2,
 .hero p,
 .hero a {
@@ -128,7 +128,7 @@ nav a.active {
   margin-bottom: 25px;
 }
 
-/* ---------- Button ---------- */
+/* nuppude stiil */
 .btn {
   display: inline-block;
   padding: 10px 25px;
@@ -144,17 +144,7 @@ nav a.active {
   color: #fff;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #0a0a15;
-  color: #aaa;
-  margin-top: 60px;
-  border-top: 1px solid #222;
-}
-
-/* ---------- Responsive ---------- */
+/* mobiili kohandused */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

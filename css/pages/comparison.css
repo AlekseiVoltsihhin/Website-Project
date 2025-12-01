@@ -2,7 +2,7 @@ body {
   line-height: 1.6;
 }
 
-/* Hero Section */
+/* hero ala kosmose taustaga */
 .hero-comparison {
   background: url("../../images/cosmos.svg") center/cover no-repeat;
   text-align: center;
@@ -38,7 +38,7 @@ body {
   margin: 0 auto;
 }
 
-/* Main Content */
+/* põhisisu paigutus */
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -60,7 +60,7 @@ main h3 {
   font-style: italic;
 }
 
-/* Planet Cards Section */
+/* planeedikaartide võrgupaigutus */
 .planet-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -83,7 +83,7 @@ main h3 {
   border-color: #00d9ff;
 }
 
-/* Planet Icons */
+/* planeedi ikooni kujundid */
 .planet-icon {
   position: relative;
   height: 150px;
@@ -118,7 +118,7 @@ main h3 {
   box-shadow: 0 0 20px rgba(212, 163, 115, 0.4);
 }
 
-/* Rings */
+/* planeedirõngaste kujundus */
 .rings {
   position: absolute;
   border-radius: 50%;
@@ -188,7 +188,7 @@ main h3 {
   color: #00d9ff;
 }
 
-/* Ring Comparison Section */
+/* rõngaste võrdluse konteiner */
 .ring-comparison {
   background-color: #0d0d1a;
   padding: 40px;
@@ -197,7 +197,7 @@ main h3 {
   border-left: 4px solid #00d9ff;
 }
 
-/* Interactive Comparison */
+/* liuguri ala rõngaste näitamiseks */
 .interactive-comparison {
   margin: 40px 0;
 }
@@ -223,7 +223,7 @@ main h3 {
   transform-origin: center center;
 }
 
-/* Saturn rings only */
+/* Saturni rõngaste skaala */
 .saturn-rings-only {
   position: absolute;
   left: 15%;
@@ -247,7 +247,7 @@ main h3 {
     transparent 45%);
 }
 
-/* J1407b rings only - MASSIVE */
+/* J1407b rõngaste skaala */
 .j1407b-rings-only {
   position: absolute;
   left: 50%;
@@ -259,7 +259,7 @@ main h3 {
 }
 
 .j1407b-rings-scaled {
-  width: 7650px; /* 425× larger than Saturn's 18px rings */
+  width: 7650px; /* 425× suurem kui saturni 18px */
   height: 7650px;
   border: 20px solid rgba(0, 217, 255, 0.4);
   border-radius: 50%;
@@ -304,7 +304,7 @@ main h3 {
   border: 1px solid #00d9ff;
 }
 
-/* Slider Control */
+/* liuguri ümbris koos taustaga */
 .slider-control {
   text-align: center;
   padding: 20px;
@@ -422,7 +422,7 @@ main h3 {
   line-height: 1.6;
 }
 
-/* Stats Table */
+/* võrdlustabel */
 .stats-table {
   margin-bottom: 60px;
 }
@@ -466,7 +466,7 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* Key Differences Section */
+/* põhierinevuste plokid */
 .key-differences {
   margin-bottom: 60px;
 }
@@ -511,7 +511,7 @@ tbody tr:last-child td {
   text-align: left;
 }
 
-/* Comparison Gallery Section */
+/* võrdluse galerii */
 .comparison-gallery {
   margin-bottom: 60px;
 }
@@ -605,7 +605,16 @@ tbody tr:last-child td {
   line-height: 1.5;
 }
 
-/* Responsive Design */
+/* jaluse ala */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #0a0a15;
+  color: #aaa;
+  border-top: 1px solid #222;
+}
+
+/* mobiilivaate kohandused */
 @media (max-width: 768px) {
   .hero-comparison {
     padding: 120px 20px 60px;

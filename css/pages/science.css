@@ -1,4 +1,4 @@
-/* Hero section */
+/* hero taustaosa */
 .hero {
   background-image: url("../../images/j1407b.jpg");
   background-size: cover;
@@ -10,7 +10,7 @@
   position: relative;
 }
 
-/* Darker overlay for hero */
+/* hero tumenev kiht */
 .hero::before {
   content: "";
   position: absolute;
@@ -39,7 +39,7 @@
   font-size: 18px;
 }
 
-/* Main content */
+/* põhisisu ala */
 main {
   padding: 60px 20px;
   max-width: 1000px;
@@ -54,7 +54,7 @@ main > h3 {
   text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
 }
 
-/* Fact cards */
+/* faktikaartide ruudustik */
 .facts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -87,7 +87,7 @@ main > h3 {
   font-size: 15px;
 }
 
-/* Info sections */
+/* infosektsioonid */
 .info-section {
   background-color: #0d0d1a;
   padding: 30px;
@@ -120,7 +120,7 @@ main > h3 {
   line-height: 1.6;
 }
 
-/* Highlight box */
+/* esiletõste kast */
 .highlight-box {
   background: linear-gradient(145deg, #1a1a2e, #161623);
   border: 1px solid #00d9ff;
@@ -153,7 +153,17 @@ main > h3 {
   border-bottom: none;
 }
 
-/* Responsive */
+/* jalus keskjoondatud tekstiga */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #0a0a15;
+  color: #aaa;
+  margin-top: 60px;
+  border-top: 1px solid #222;
+}
+
+/* mobiilivaate kohandused */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
