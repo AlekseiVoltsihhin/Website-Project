@@ -49,6 +49,10 @@ nav a:hover {
   color: #00d9ff;
 }
 
+nav a.active {
+  color: #00d9ff;
+}
+
 /* ---------- Hero Section ---------- */
 .hero {
   height: 100vh;
