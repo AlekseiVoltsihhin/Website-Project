@@ -83,12 +83,3 @@ header p {
 .contact-form button:hover {
   background-color: #00a6c5;
 }
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: #aaa;
-  margin-top: 40px;
-}
