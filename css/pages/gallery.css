@@ -1,17 +1,39 @@
-/* Page spacing */
+/* üldine lehe stiil + taust */
 body {
   line-height: 1.6;
+  background-color: #0d0d1a;
+  color: #ddd;
 }
 
-/* Hero */
+/* hero taust, paiknemine */
 .hero {
   background-image: url("../../images/cosmos.svg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   text-align: center;
   padding: 140px 20px 120px;
+  padding: 20px 20px 20px;
+  position: relative;
+  margin-top: 1px;
 }
 
+/* hero osa tume kiht e overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+/* teeb hero teksti nähtavaks overlay peal */
+.hero h2,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
+/* h2 pealkirja stiil */
 .hero h2 {
   font-size: 36px;
   color: #00d9ff;
@@ -19,56 +41,72 @@ body {
   letter-spacing: 1.2px;
 }
 
+/* p stiil */
 .hero p {
-  color: #e8f6ff;
-  font-size: 18px;
   line-height: 1.8;
+  margin: 0 auto 15px;
+  text-shadow: 0 2px 10px rgba(0, 217, 255, 0.5);
+  max-width: 700px;
+  color: #ddd;
+  font-size: 18px;
 }
 
-/* Main */
+/* Noole stiil */
+.scroll-down {
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 100px;
+  color: #00d9ff;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* põhiosa e main paigutus */
 main {
-  padding: 40px 20px;
+  padding: 60px 20px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
+/* "Images" stiil */
 main h3 {
   color: #00d9ff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
 }
 
-/* Gallery grid */
+/* galerii grid paiknemine */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* pildi kasti stiil */
 .img-box {
-  background-color: #161623;
-  padding: 8px;
-  border-radius: 8px;
+  background: linear-gradient(145deg, #161623, #1a1a2e);
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #222;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* hover osa pildikasti jaoks */
 .img-box:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+  border-color: #00d9ff;
 }
 
-/* --- UPDATED IMAGE SIZING --- */
+/* piltide mõõdud */
 .img-box img {
   width: 100%;
-  height: 200px;         /* pildid on ühesuurused */
-  object-fit: cover;     /* hoiab proportsioonid ja kärbib */
-  border-radius: 5px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: #aaa;
-  margin-top: 40px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
 }

@@ -1,20 +1,22 @@
-/* Page spacing */
+/* lehe tekstivahe */
 body {
   line-height: 1.6;
 }
 
-/* Page header */
+/* headeri paigutus */
 header {
   text-align: center;
-  padding: 140px 20px 40px; /* extra padding because of fixed navbar */
+  padding: 140px 20px 40px;
 }
 
+/* headeri pealkirja stiil */
 header h1 {
   color: #00d9ff;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
+/* p stiil */
 header p {
   color: #ccc;
   max-width: 600px;
@@ -22,13 +24,14 @@ header p {
   line-height: 1.5;
 }
 
-/* Contact form container */
+/* vormi ümbris, et vorm oleks keskel */
 .contact-container {
   display: flex;
   justify-content: center;
   padding: 20px;
 }
 
+/* kontaktvormi stiil */
 .contact-form {
   background-color: #161623;
   padding: 30px;
@@ -38,14 +41,14 @@ header p {
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-/* Labels */
+/* vormis siltide stiil */
 .contact-form label {
   font-weight: bold;
   margin-top: 15px;
   display: block;
 }
 
-/* Inputs */
+/* vormis input-väljade stiil */
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
@@ -58,6 +61,7 @@ header p {
   color: white;
 }
 
+/* input-väljade stiil, kui peale klikkida */
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
@@ -65,7 +69,7 @@ header p {
   border-color: #00d9ff;
 }
 
-/* Submit button */
+/* saatmisnupu stiil */
 .contact-form button {
   margin-top: 25px;
   width: 100%;
@@ -80,15 +84,7 @@ header p {
   transition: background-color 0.2s ease;
 }
 
+/* hover osa nupu jaoks */
 .contact-form button:hover {
   background-color: #00a6c5;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  color: #aaa;
-  margin-top: 40px;
 }
