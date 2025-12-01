@@ -1,11 +1,9 @@
-// Fail: comparison.js
 // Kontekst: võrdluslehe interaktiivsed elemendid (rõngaste skaala, navigeerimine, animatsioonid)
 // Autor: Aleksei Voltšihhin (projektimeeskond)
 // Eesmärk: tutvustada J1407b ja Saturni rõngaste suurusvahet, lisades kasutajale nähtav suumimine ja kerimisega käivituva animatsiooni.
 // Viited: MDN <input type="range"> sündmused ja stiilid (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range),
 //         MDN Element.scrollIntoView sujuv kerimine (https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView),
-//         MDN IntersectionObserver API (https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API),
-//         CSS-Tricksi juhend IntersectionObserveri kasutamiseks visuaalsete efektide lisamisel (https://css-tricks.com/intersection-observer-api/)
+//         MDN IntersectionObserver API (https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 const scaleSlider = document.getElementById('scaleSlider');
 const scaleReference = document.querySelector('.scale-reference');
 const zoomLevelDisplay = document.getElementById('zoomLevel');
@@ -18,11 +16,11 @@ if (scaleSlider && scaleReference && zoomLevelDisplay) {
     zoomLevelDisplay.textContent = `${scale.toFixed(1)}x`;
   });
 
-  // Määra algne suumitase
+  // Määrame algne suumitase
   scaleReference.style.transform = 'scale(0.1)';
 }
 
-// Lisa sujuv kerimine navigeerimislinkidele
+// Lisame sujuv kerimine navigeerimislinkidele
 const navLinks = document.querySelectorAll('nav a');
 navLinks.forEach((link) => {
   link.addEventListener('click', function (e) {
@@ -41,7 +39,7 @@ navLinks.forEach((link) => {
   });
 });
 
-// Lisa kerimisel nähtavad animatsioonid kaartidele
+// Lisame kerimisel nähtavad animatsioonid kaartidele
 const observerOptions = {
   threshold: 0.1,
   rootMargin: '0px 0px -50px 0px',
@@ -56,7 +54,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Vaatle kõiki kaarte ja sektsioone, et animatsioon käivituks kerimisel
+// Vaatleme kõiki kaarte ja sektsioone, et animatsioon käivituks kerimisel
 const animatedElements = document.querySelectorAll(
   '.planet-card, .difference-card, .stats-table, .ring-comparison'
 );
